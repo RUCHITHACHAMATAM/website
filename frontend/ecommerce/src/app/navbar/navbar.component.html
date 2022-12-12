@@ -1,0 +1,51 @@
+<div class="nav">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <!-- <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>-->
+
+      <button mat-icon-button [matMenuTriggerFor]="menu2" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span style="font-size: 24px;">
+        <i class="fa fa-amazon" area-hidden="true"></i><strong>&nbsp;&nbsp;Amazone</strong>
+      </span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <div *ngIf="!isLoggedIn()">
+          <!-- <button [routerLink]="/home">test</button> -->
+          <a  routerLink="/home"   mat-button>Home&nbsp;<mat-icon>home</mat-icon></a>
+          <a routerLink="/signin" mat-button>Login&nbsp;<mat-icon>login</mat-icon></a>
+        </div>
+        <div *ngIf="isLoggedIn()">
+          <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-button>Home&nbsp;<mat-icon>home</mat-icon></a>
+          <a routerLink="/wishlist" routerLinkActive="active" mat-button>Wishlist&nbsp;<mat-icon>favorite</mat-icon></a>
+          <a routerLink="/cart" routerLinkActive="active" mat-button>Cart&nbsp;<mat-icon>shopping_cart</mat-icon></a>
+          <a routerLink="/signin" routerLinkActive="active" mat-button (click)="isLoggedOut()">Logout&nbsp;<mat-icon>logout</mat-icon></a>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<mat-menu #menu2 class="bg-menu">
+  <a mat-menu-item routerLink="/home" class="menu-button">
+    <mat-icon class="col" mat-list-icon>home</mat-icon>Home
+  </a>
+  <a mat-menu-item routerLink="/wishlist" class="menu-button" *ngIf="isLoggedIn()">
+    <mat-icon class="col" mat-list-icon>favorite</mat-icon>Wishlist
+  </a>
+  <a mat-menu-item routerLink="/cart" class="menu-button" *ngIf="isLoggedIn()">
+    <mat-icon class="col" mat-list-icon>shopping_cart</mat-icon>Cart
+  </a>
+  <a mat-menu-item routerLink="/signin" class="menu-button" (click)="isLoggedOut()" *ngIf="isLoggedIn()">
+    <mat-icon class="col" mat-list-icon>logout</mat-icon>Logout
+  </a>
+  <a mat-menu-item routerLink="/signin" class="menu-button" *ngIf="!isLoggedIn()">
+    <mat-icon class="col" mat-list-icon>login</mat-icon>Login
+  </a>
+
+
+</mat-menu>

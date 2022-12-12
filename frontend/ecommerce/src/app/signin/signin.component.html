@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+</svg>
+<section class="body">
+    <div class="alert alert-danger d-flex align-items-center" role="alert" *ngIf=flag>
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+            <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+            Invalid Login Credentials
+        </div>
+    </div>
+    <div class="loginBox">
+        <img class="user"
+            src="../../assets/icon1.webp"
+            height="100px" width="100px">
+        <h3>Sign in here</h3>
+        <form [formGroup]="myform" (ngSubmit)="signin()">
+            <div class="inputBox">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp" name="userName"
+                        formControlName="userName" placeholder="Enter Username">
+                    <div *ngIf="userName && userName.invalid && (userName.dirty || userName.touched)"
+                        class=" text-danger">
+                        <div *ngIf="userName.errors?.['required']">
+                            username is required.
+                        </div>
+                        <div *ngIf="userName.errors?.['minlength']">
+                            username must be min 2 length.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pass" placeholder="Enter Password" name="password"
+                        formControlName="password">
+                    <div *ngIf="password && password.invalid && (password.dirty || password.touched)"
+                        class=" text-danger">
+                        <div *ngIf="password.errors?.['required']">
+                            password is required.
+                        </div>
+                        <div *ngIf="password.errors?.['minlength']">
+                            password must be min 8 length.
+                        </div>
+                        <div *ngIf="password.errors?.['maxlength']">
+                            password must be max 12 length.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" id="effect">Login</button>
+        </form>
+        <br>
+        <a id="effect" href="#">Forget Password</a>
+        <br>
+        <div class="text-center">
+            <p style="color: #262626; font-size: 15px; margin-top: 11px;">New user? &nbsp;</p>
+            <a id="effect" style="font-size:15px;" (click)="goToPage('signup')">Sign-Up</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!-- </head>
+
+<body style="overflow: scroll"> -->
+<!-- <div class="container">
+        <div class="row">
+            <div *ngFor="let product of products" class="col-md-3">
+                <div class="card m-4" style="height: 22rem; width: 18rem;">
+                    <img src={{product.image}} class="card-img-top" alt="..."
+                        style="height: 100px; width:100px;margin-top:8%; margin-left: 25%;">
+                    <div class="card-body">
+                        <h3 id="truncate" class="card-title">{{product.title}}</h3>
+                        <button id="btnRupee" href="#" class="btn btn-primary"><i class="fa fa-rupee"></i> &nbsp;
+                            {{product.price}}</button>
+                        <br>
+                        <br>
+                        <p class="card-text"><span class="fa fa-star"></span>{{product.rating.rate}} <span
+                                style="color: grey;"><small>&nbsp;reviews</small></span><small><span
+                                    style="color: grey;">({{product.rating.count}})</span></small>
+                        </p>
+
+                        <mat-icon class="fav">favorite_border</mat-icon>
+                        <mat-icon class="cart" (click)="addProduct(product)">remove_circle_outline</mat-icon>
+                        <span class="quantity"> 1 </span>
+                        <mat-icon (click)="addProduct(product)">add_circle_outline</mat-icon>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<!-- </body>
+
+</html> -->
+
+
+<div class="cartImage" *ngIf="products?.length===null">
+    <img src="../../assets/wishlist.png" height="60%" width="50%" alt="wishlist is empty">
+</div>
+<div *ngIf="productPresent" style="background-color:azure; background-size:cover;">
+    <div  style="overflow: hidden;">
+        <div class="container-fluid">
+            <div class="row">
+                <div *ngFor="let product of products" class="col-md-3">
+                    <div class="card m-4" style="height: 22rem; width: 18rem;">
+                        <img src={{product.image}} class="card-img-top" alt="..."
+                            style="height: 100px; width:100px;margin-top:8%; margin-left: 25%;">
+                        <div class="card-body">
+                            <h3 id="truncate" class="card-title">{{product.productName}}</h3>
+                            <button id="btnRupee" href="#" class="btn btn-primary"><i class="fa fa-rupee"></i> &nbsp;
+                                {{product.price}}</button>
+                            <br>
+                            <br>
+                            <p class="card-text"><span class="fa fa-star"></span>{{product.rating.rate}} <span
+                                    style="color: grey;"><small>&nbsp;reviews</small></span><small><span
+                                        style="color: grey;">({{product.rating.count}})</span></small>
+                            </p>
+
+                            <mat-icon class="fav" (click)="deleteProduct(product.productId)">favorite</mat-icon>
+                            
+
+
+                            <!-- <mat-icon class="cart">shopping_cart</mat-icon> -->
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

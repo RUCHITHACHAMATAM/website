@@ -1,0 +1,46 @@
+.nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.nav a:hover,
+a:active {
+    color: rgb(254, 189, 105);
+}
+
+.nav mat-toolbar {
+    border-radius: 3px;
+    color: whitesmoke;
+    background-color: rgb(19, 26, 34)
+}
+
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+.menu-button {
+    font-size: 4.5mm;
+    min-width: 5cm;
+    height: 15mm;
+    color: whitesmoke;
+    font-weight: 500;
+    background-color: rgba(35, 47, 62, 0.836);
+}
+
+.col {
+    color: whitesmoke;
+}
+
+.col:hover {
+    color: rgb(254, 189, 105);
+
+}
+
+.menu-button:hover {
+    color: rgb(254, 189, 105);
+}
+
+.active{
+    background-color: rgb(55, 71, 90);
+}

@@ -1,0 +1,81 @@
+h5:hover {
+    color: rosybrown;
+}
+
+#truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card:hover {
+    outline: auto;
+    outline-color: rgb(254, 189, 105);
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+
+}
+
+#btnRupee:hover {
+    background-color: white;
+    color: black;
+}
+
+body {
+    /* background-color:  rgb(55, 71, 90); */
+    background-color: lightgrey;
+}
+
+.fav {
+    color: red;
+}
+
+.cart {
+    margin-left: 58%;
+}
+
+#btn{
+    float: right;
+    font-size: x-large;
+    text-align: right;
+    padding-left: 30px ;
+    padding-right: 30px;
+}   
+
+.footer {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    height: 7%;
+    width: 100%;
+    background-color: rgb(35,47,62);
+    color: whitesmoke;
+}
+
+.total{
+    float: left;
+    font-size: x-large;
+    margin-top: 4px;
+    font-weight: lighter;
+}
+
+.quantity{
+    font-size: larger;
+}
+
+
+.cartImage{
+    margin-top: 25px;
+    display:flex ;
+    justify-content: center;
+}
+
+.homeButton{
+    text-align: center;
+    font-size: xx-large;
+    padding: 2%;
+}
+.btn{
+    font-size: x-large;
+}

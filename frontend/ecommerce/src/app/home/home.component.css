@@ -1,0 +1,37 @@
+h5:hover {
+    color: rosybrown;
+}
+
+#truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card:hover {
+    outline: auto;
+    outline-color: rgb(254, 189, 105);
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+
+}
+
+#btnRupee:hover {
+    background-color: white;
+    color: black;
+}
+
+.body {
+    /* background-color:  rgb(55, 71, 90); */
+    overflow: hidden;
+    background-color: lightgrey;
+}
+
+.fav {
+    color: red;
+}
+
+.cart {
+    margin-left: 75%;
+}
