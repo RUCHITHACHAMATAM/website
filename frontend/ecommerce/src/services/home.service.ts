@@ -18,7 +18,7 @@ export class HomeService {
 
    cartUrl: string = "http://localhost:7075/cart/"
 
-   wishlistUrl: string = "http://localhost:8080/"
+   wishlistUrl: string = "http://localhost:8089/"
 
 
    getAllProducts() {

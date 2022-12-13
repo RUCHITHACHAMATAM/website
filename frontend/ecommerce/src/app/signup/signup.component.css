@@ -159,7 +159,7 @@ p {
 
 @media (min-height: 500px) {
     .loginBox {
-        margin-top: 25px;
+        margin-top: 40px;
         position: absolute;
         top: 50%;
         left: 50%;
